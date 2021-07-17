@@ -1,5 +1,5 @@
 # Proyecto de ejemplo
-Tecnologia utilizada: nodeJS, expressJS
+Tecnología utilizada: nodeJS, expressJS
 
 ## Instrucciones de instalación
 Una vez descargado los fuentes desde el repositorio.
@@ -9,6 +9,6 @@ Una vez descargado los fuentes desde el repositorio.
 ## Instrucciones para ejecución
 *nodemon server.js*
 
-Alternativamente si no funciona nodemon en forma local.
+Alternativamente si no funciona nodemon localmente podrá ejecutarlo directamente desde node.
 
 *node server.js*
