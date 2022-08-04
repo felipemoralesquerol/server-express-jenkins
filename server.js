@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const app = express();
 
 // Inicialización de array con algunos datos
-let arr = ['cero', 'uno', 'dos', 'tres', 'cuatro']
+let arr = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco']
 
 // Agregado para obtener información de las peticiones HTTP en consola 
 app.use(morgan('dev'));
