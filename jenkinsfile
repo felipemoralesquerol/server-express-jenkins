@@ -32,8 +32,9 @@ pipeline {
                     sh 'docker rm ${container_name}'
                     sh 'docker rmi ${image_name}:${tag_image}'
 
-                  } catch (Exception e) {
-                      echo 'Exception info: ' + e.toString()
+                  } catch (err) {
+                      echo err.getMessage()
+                      echo "Error detected, but we will continue."
                   }
               }
              sh 'npm run build'

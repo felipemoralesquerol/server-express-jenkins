@@ -16,3 +16,6 @@ Alternativamente si no funciona nodemon localmente podrá ejecutarlo directament
 #### Notas
 Incluye archivo en formato json para utilizar en postman.
 
+#### Extras
+sudo /etc/init.d/jenkins restart
+
