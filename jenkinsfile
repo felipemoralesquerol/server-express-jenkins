@@ -1,0 +1,28 @@
+pipeline {
+ agent any 
+
+ tools {
+     nodejs "node"
+ }
+
+ parameters {
+     string(name: 'container_name', defaultValue: 'node-app-p11', description: 'Nombre del contenedor')
+     string(name: 'image_name', defaultValue: 'node-app-p11-image', description: 'Nombre de la imagen')
+     string(name: 'tag_image', defaultValue: 'lts', description: 'Tag de la imagen')
+     string(name: 'container_port', defaultValue: '80', description: 'Puerto del container')
+ }
+
+ stages {
+    stage('install') {
+      steps {
+          git branch: 'develop', url: 'https://github.com/felipemoralesquerol/aca-sprint1-meeting11-server-express.git'
+          dir('/') {
+              sh 'npm install'
+          }
+
+      }
+
+    } 
+ }
+
+}
