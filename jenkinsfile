@@ -37,7 +37,7 @@ pipeline {
                       echo "Error detected, but we will continue."
                   }
               }
-             sh 'npm run build'
+             
              sh 'docker build -t ${image_name}:${tag_image} .' 
           }
 
