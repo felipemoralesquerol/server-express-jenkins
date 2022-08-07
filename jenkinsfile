@@ -23,15 +23,23 @@ pipeline {
 
       }
     } 
-      stage('start') {
+      stage('stop') {
       steps {
          dir('') {
               sh 'npx kill-port 4000'
+          }
+
+      }
+    }  
+      stage('start') {
+      steps {
+         dir('') {
               sh 'node server.js > /dev/null &'
           }
 
       }
     }  
+
  }
 
 }
