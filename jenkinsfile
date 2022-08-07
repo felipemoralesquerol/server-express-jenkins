@@ -18,6 +18,7 @@ pipeline {
           git branch: 'develop', url: 'https://github.com/felipemoralesquerol/aca-sprint1-meeting11-server-express.git'
           dir('') {
               sh 'npm install'
+              sh 'npm audit fix'
           }
 
       }
