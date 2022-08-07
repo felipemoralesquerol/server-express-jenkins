@@ -9,7 +9,7 @@ pipeline {
      string(name: 'container_name', defaultValue: 'node-app-p11', description: 'Nombre del contenedor')
      string(name: 'image_name', defaultValue: 'node-app-p11-image', description: 'Nombre de la imagen')
      string(name: 'tag_image', defaultValue: 'lts', description: 'Tag de la imagen')
-     string(name: 'container_port', defaultValue: '80', description: 'Puerto del container')
+     string(name: 'container_port', defaultValue: '4000', description: 'Puerto del container')
  }
 
  stages {
@@ -47,7 +47,7 @@ pipeline {
       stage('deploy') {
       steps {
          dir('') {
-               sh 'docker run -d  -p ${container_name}:4000 --name ${container_name} ${image_name}:${tag_image}'
+               sh 'docker run -d  -p ${container_port}:4000 --name ${container_name} ${image_name}:${tag_image}'
               }
           }
 
