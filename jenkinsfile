@@ -34,7 +34,7 @@ pipeline {
       stage('start') {
       steps {
          dir('') {
-              sh 'node server.js > /dev/null &'
+              sh 'node server.js'
           }
 
       }
