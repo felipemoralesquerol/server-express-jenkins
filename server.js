@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Detalle de los endpoints (o rutas)
 app.get('/', (req, res) => {
-    res.send('App web desarrolla en meeting 11 de Acámica!');
+    res.send('App web desarrolla en contexto de pruebas con Jenkins!');
 });
 
 app.get('/phones', (req, res) => {
