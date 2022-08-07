@@ -33,7 +33,7 @@ pipeline {
                     sh 'docker rmi ${image_name}:${tag_image}'
 
                   } catch (Exception e) {
-                      echo 'Exception ' + e.toString()
+                      echo 'Exception info: ' + e.toString()
                   }
               }
              sh 'npm run build'
