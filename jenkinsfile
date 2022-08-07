@@ -26,7 +26,8 @@ pipeline {
       stage('start') {
       steps {
          dir('') {
-              sh 'node server.js'
+              sh 'npx kill-port 4000'
+              sh 'node server.js > /dev/null &'
           }
 
       }
