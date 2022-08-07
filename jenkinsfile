@@ -32,7 +32,7 @@ pipeline {
                     sh 'docker rm ${container_name}'
                     sh 'docker rmi ${image_name}:${tag_image}'
 
-                  } cath (Exeception e) {
+                  } cath (Exception e) {
                       echo 'Exception ' + e.toString()
                   }
               }
