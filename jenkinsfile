@@ -16,7 +16,7 @@ pipeline {
     stage('install') {
       steps {
           git branch: 'develop', url: 'https://github.com/felipemoralesquerol/aca-sprint1-meeting11-server-express.git'
-          dir('/') {
+          dir('') {
               sh 'npm install'
           }
 
