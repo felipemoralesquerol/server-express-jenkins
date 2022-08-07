@@ -47,7 +47,6 @@ pipeline {
       steps {
          dir('') {
                sh 'docker run -d ${image_name}:80 --name ${container_name} ${image_name}:${tag_image}'
-
               }
           }
 
