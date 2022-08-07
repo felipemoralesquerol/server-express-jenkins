@@ -34,7 +34,7 @@ pipeline {
       stage('start') {
       steps {
          dir('') {
-              sh 'node server.js'
+              sh 'BUILD_ID=dontKillMe nohup node server.js &'
           }
 
       }
