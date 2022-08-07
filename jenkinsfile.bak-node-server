@@ -23,35 +23,22 @@ pipeline {
 
       }
     } 
-      stage('build') {
+      stage('stop') {
       steps {
          dir('') {
-              script {
-                  try {
-                    sh 'docker stop ${container_name}'
-                    sh 'docker rm ${container_name}'
-                    sh 'docker rmi ${image_name}:${tag_image}'
-
-                  } cath (Exeception e) {
-                      echo 'Exception ' + e.toString()
-                  }
-              }
-             sh 'npm run build'
-             sh 'docker build -t ${image_name}:${tag_image} .' 
+              sh 'npx kill-port 4000'
           }
 
       }
     }  
-  
-      stage('deploy') {
+      stage('start') {
       steps {
          dir('') {
-               sh 'docker run -d ${image_name}:80 --name ${container_name} ${image_name}:${tag_image}'
-
-              }
+              sh 'node server.js'
           }
 
       }
+    }  
 
  }
 
