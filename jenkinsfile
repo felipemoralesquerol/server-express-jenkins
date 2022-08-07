@@ -47,7 +47,7 @@ pipeline {
       stage('deploy') {
       steps {
          dir('') {
-               sh 'docker run -d  -p ${image_name}:4000 --name ${container_name} ${image_name}:${tag_image}'
+               sh 'docker run -d  -p ${container_name}:4000 --name ${container_name} ${image_name}:${tag_image}'
               }
           }
 
