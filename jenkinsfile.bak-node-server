@@ -15,7 +15,7 @@ pipeline {
  stages {
     stage('install') {
       steps {
-          git branch: 'develop', url: 'https://github.com/felipemoralesquerol/aca-sprint1-meeting11-server-express.git'
+          git branch: 'develop', url: 'https://github.com/felipemoralesquerol/server-express-jenkins.git'
           dir('') {
               sh 'npm install'
               sh 'npm audit fix'
