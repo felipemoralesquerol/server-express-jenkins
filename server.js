@@ -48,7 +48,7 @@ app.delete('/phones/:id', (req, res) => {
 })
 
 app.get('/version', (req, res) => {
-    res.json({version: "1.0.2"});
+    res.json({version: "1.0.3"});
 });
 
 app.get('/time', (req, res) => {
